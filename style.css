@@ -1,0 +1,25 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+.title-style {
+  padding-top: 1.5vw;
+  padding-left: 3vw;
+  font-family: 'Roboto', sans-serif;
+}
+
+p {
+  padding-left: 3.5vw;
+  padding-bottom: 3.5vw;
+  font-family: 'Lora', serif;
+}
+
+.link-style {
+  color: #101010;
+}
+
+.link-style:hover{
+  color: #808080;
+}
