@@ -26,8 +26,8 @@ function setup() {
 function draw() {
  clear();
   fill(255);
- stroke(255);
- strokeWeight(0);
+ stroke(0);
+ strokeWeight(4);
   const zoom = myMap.zoom();
  const athens = myMap.latLngToPixel(39.3292,-82.1013);
 
@@ -42,12 +42,12 @@ function draw() {
     
          ellipse(pos.x,pos.y,1 * myMap.zoom(),1 * myMap.zoom());
     strokeWeight(4);
-    stroke(255);
+    stroke(0);
     
  if(dist(pos.x,pos.y,mouseX,mouseY) < 1 * myMap.zoom()){
     textSize(25);
-  stroke(255);
- strokeWeight(0);
+  stroke(0);
+ strokeWeight(4);
      text(address,pos.x,pos.y);
   }
     
