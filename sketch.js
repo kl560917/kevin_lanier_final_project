@@ -1,13 +1,10 @@
-//Followed in class code of mfranz mapbox 
-//This data shows the top ten golf courses in the U.S. according to golf digest
-
-const key = 'pk.eyJ1IjoicG9zdHBsYXN0aWMiLCJhIjoiY2tpamJyNm1zMDE0OTJ0czU5cDkyNjE3ciJ9.VRXSaQR1sQoWudM3Bgp9Lg';
+const key = 'pk.eyJ1Ijoia2V2aW5sYW5pZXIxNSIsImEiOiJja25waXMxNGgwMml5Mm9uMDR2am5qMWM3In0.yq4ri_x1AqlgpwPMZp-o8g';
 
 const options = {
-  lat: 30.556,
-  lng: 12.699,
-  zoom: 0,
-  style: 'mapbox://styles/postplastic/ckm2eo8wbakp217l5n95zbvvb',
+  lat: 53.272801906183766,
+  lng: -1.9249845649832393,
+  zoom: 4,
+  style: 'mapbox://styles/kevinlanier15/cknpiyg8a3day17p1qklcbzx6',
   pitch: 0
 };
 
@@ -26,8 +23,8 @@ function setup() {
 function draw() {
  clear();
   fill(255);
- stroke(0);
- strokeWeight(4);
+ stroke(255);
+ strokeWeight(2);
   const zoom = myMap.zoom();
  const athens = myMap.latLngToPixel(39.3292,-82.1013);
 
@@ -41,13 +38,14 @@ function draw() {
 
     
          ellipse(pos.x,pos.y,1 * myMap.zoom(),1 * myMap.zoom());
-    strokeWeight(4);
-    stroke(0);
+    strokeWeight(2);
+    stroke(255);
     
  if(dist(pos.x,pos.y,mouseX,mouseY) < 1 * myMap.zoom()){
-    textSize(25);
-  stroke(0);
- strokeWeight(4);
+   fill(0)
+    textSize(20);
+   stroke(255);
+   strokeWeight(2)
      text(address,pos.x,pos.y);
   }
     
@@ -69,5 +67,3 @@ $(window).bind('resize', function(e)
     this.location.reload(false); /* false to get page from cache */
   }, 200);
 });
-
-
